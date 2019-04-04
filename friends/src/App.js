@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import {Route} from 'react-router-dom';
 import axios from 'axios';
+
 import FriendsList from './component/FriendsList';
 import NewFriendInput from './component/NewFriendInput'
+import Nav from './component/Nav';
+
+
 class App extends Component {
   
   state = {
@@ -15,12 +20,19 @@ class App extends Component {
        .then( res => {this.setState({friends: res.data})})
        .catch(err => console.log(err));
   }
+   
+  updateFriends = newFriends => {
+    this.setState({ friends: newFriends});
+  };
+
 
   render() {
     return (
      <div>
-        <NewFriendInput friends={this.state.friends} />
-        <FriendsList friends={this.state.friends}/>
+        <Route path='/' component={Nav}/>
+        <Route path='/add' exact render={props => <NewFriendInput {...props } friends={this.state.friends}  updateFriends={this.updateFriends}/>}/>
+        <Route path='/friends' render={props => <FriendsList {...props} friends={this.state.friends} updateFriends={this.updateFriends}/>}/>
+        
      </div>
     );
   }
