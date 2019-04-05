@@ -2,7 +2,7 @@
 
 [![Image from Gyazo](https://i.gyazo.com/0b0aa61a1fab90928a06453afc3f1251.gif)](https://gyazo.com/0b0aa61a1fab90928a06453afc3f1251)
 
-
+[![Image from Gyazo](https://i.gyazo.com/d128536df79882b0c811ec95bc5de42d.gif)](https://gyazo.com/d128536df79882b0c811ec95bc5de42d)
 
 # HTTP/AJAX
 
