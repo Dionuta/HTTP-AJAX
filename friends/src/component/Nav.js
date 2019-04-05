@@ -25,9 +25,8 @@ const Nav = () => {
       <div className="nav">
         <h1>Friends List</h1>
         <nav>
-          <Link to="/friends">Home</Link>
+          <Link to="/">Home</Link>
           <Link to="/add">Add</Link>
-          <Link to="/add">Put</Link>
         </nav>
       </div>
     </Navagation>

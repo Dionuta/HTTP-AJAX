@@ -48,7 +48,7 @@ export default class NewFriendInput extends React.Component {
                 id: Date.now(),
             })
             .then(res => {
-                this.props.history.push("/friends");
+                this.props.history.push("/");
                 this.props.updateFriends(res.data);
                 console.log(res);
                 console.log(res.data)

@@ -31,7 +31,7 @@ class App extends Component {
      <div>
         <Route path='/' component={Nav}/>
         <Route path='/add' exact render={props => <NewFriendInput {...props } friends={this.state.friends}  updateFriends={this.updateFriends}/>}/>
-        <Route path='/friends' render={props => <FriendsList {...props} friends={this.state.friends} updateFriends={this.updateFriends}/>}/>
+        <Route path='/' exact render={props => <FriendsList {...props} friends={this.state.friends} updateFriends={this.updateFriends}/>}/>
         
      </div>
     );
