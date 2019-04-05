@@ -1,7 +1,9 @@
 import React from "react";
+
+
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-
+// Nav provides navigation thanks to react router 
 const Navagation = styled.nav`
   .nav {
     text-align: center;

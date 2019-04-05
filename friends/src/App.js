@@ -10,18 +10,18 @@ import Nav from './component/Nav';
 
 class App extends Component {
   
-  state = {
+  state = { 
     friends: []
   }
-
+//  axios gets data from server 
   componentDidMount(){
      axios
-       .get('http://localhost:5000/friends')
-       .then( res => {this.setState({friends: res.data})})
-       .catch(err => console.log(err));
+       .get('http://localhost:5000/friends') // server
+       .then( res => {this.setState({friends: res.data})}) // set state on friends 
+       .catch(err => console.log(err)); // if error return msg in console
   }
    
-  updateFriends = newFriends => {
+  updateFriends = newFriends => { // updates friends state once info is passed to it 
     this.setState({ friends: newFriends});
   };
 

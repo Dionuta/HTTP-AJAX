@@ -38,13 +38,13 @@ export default class NewFriendInput extends React.Component {
           }
          )}
 
-    handleSubmit = (e) => {
+    handleSubmit = (e) => { // axios.post adds new object to server.
        e.preventDefault();
         axios
             .post('http://localhost:5000/friends', {
                 name: this.state.name,
                 age: this.state.age, 
-                email: this.state.email,
+                email: this.state.email,  
                 id: Date.now(),
             })
             .then(res => {
